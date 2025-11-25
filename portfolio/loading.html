@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <meta http-equiv="refresh" content="5;url=enter.html">
+    <style>
+body{
+    height:100%; width:100%;
+    background:#000;
+    display:fixed;
+    justify-content:center;
+    align-items:center;
+    font-family:sans-serif;
+    color:white;
+}
+
+.loading{
+    font-size:32px;
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+}
+
+.loading::after{
+    content:"";
+    animation:dots 1.5s infinite;
+}
+
+@keyframes dots{
+    0%{content:"";}
+    33%{content:".";}
+    66%{content:"..";}
+    100%{content:"...";}
+}
+</style>
+
+</head>
+<body>
+    <div class="loading">Too much creativity detected! <br> May take a while</div>
+</body>
+</html>

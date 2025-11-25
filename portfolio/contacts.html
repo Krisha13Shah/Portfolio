@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+    <style>
+    body {
+        margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #F5F1E7;
+    }
+     .top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        backdrop-filter: blur(15px);
+        background-color: #0000004d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+    .top-left, .top-btn {
+        font-size: 26px;
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 6px;
+        transition: 0.2s;
+    }
+    .container {
+    width: 90%;
+    max-width: 430px;
+    margin: auto;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    background-color: #FFDADA;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+.tagline {
+    text-align: center;
+    margin-top: -5px;
+    font-size: 14px;
+    color: #444;
+}
+
+.label {
+    display: block;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.social-box {
+    background: white;
+    padding: 12px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #ccc;
+}
+
+.social-box img {
+    height: 48px;
+    cursor: pointer;
+}
+
+.input-box {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1.7px solid #999;
+    margin-top: 6px;
+    background: white;
+}
+
+.message-box {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    margin-top: 6px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1.7px solid #999;
+    background: white;
+    resize: none;
+}
+
+.send-btn {
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 0 7px #00000030;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+.bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        backdrop-filter: blur(15px);
+        background-color: #0000004d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+    .name {
+        font-size: 32px;
+        color: white;
+        font-weight: bold;
+        padding-left: 40px;
+    }
+
+    .nav-apps img {
+        height: 30px;
+        margin-right: 50px;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="desktop.html" class="top-left">&lt; Home</a>
+        <div class="top-right">
+            <a href="desktop.html" class="top-btn">_</a>
+            <a href="desktop.html" class="top-btn">X</a>
+        </div>
+    </div>
+
+<div class="container">
+
+    <img src="Img.png" class="profile-img">
+
+    <h1>Krisha Shah</h1>
+    <p class="tagline">Designer • Maker • Visual Storyteller</p>
+
+    <label class="label">Social media Links :</label>
+    <div class="social-box">
+        <img src="insta.png">
+        <img src="behance.png">
+        <img src="linkdin.png">
+    </div>
+
+    <label class="label">Name :</label>
+    <input type="text" class="input-box">
+
+    <label class="label">Email :</label>
+    <input type="email" class="input-box">
+
+    <label class="label">Message :</label>
+    <textarea class="message-box"></textarea>
+
+    <button class="send-btn">Send</button>
+
+</div>
+
+     <div class="bottom-nav">
+        <div class="name">Folioverse</div>
+
+        <div class="nav-apps">
+            <img src="Home.png" onclick="location.href='home.html'">
+            <img src="About me.png" onclick="location.href='aboutme.html'">
+            <img src="Projects.png" onclick="location.href='projects.html'">
+            <img src="Contacts.png" onclick="location.href='contacts.html'">
+        </div>
+    </div>
+
+</body>
+</html>

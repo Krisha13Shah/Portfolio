@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Page</title>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #F5F1E7;
+}
+
+.top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        backdrop-filter: blur(15px);
+        background-color: #0000004d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+    .top-left, .top-btn {
+        font-size: 26px;
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 6px;
+        transition: 0.2s;
+    }
+
+.folder-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 60px; 
+    gap: 0px;
+margin-left: 40px;
+    margin-right: 40px;
+}
+    
+
+
+.folder-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.folder-box img {
+    width: 70px;
+}
+
+.folder-box p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.folder-box:hover {
+        background-color: #E0E0E0;
+        cursor: pointer;}
+
+
+.bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        backdrop-filter: blur(15px);
+        background-color: #0000004d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+    .name {
+        font-size: 32px;
+        color: white;
+        font-weight: bold;
+        padding-left: 40px;
+    }
+
+    .nav-apps img {
+        height: 30px;
+        margin-right: 50px;
+        cursor: pointer;
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="folder-list">
+<div class="top-nav">
+    <a href="desktop.html" class="top-left">&lt; Home</a>
+    <div class="top-right">
+        <a href="desktop.html" class="top-btn">_</a>
+        <a href="desktop.html" class="top-btn">X</a>
+    </div>
+</div>
+<div class="folder-box">
+    <img src="image 14.png" onclick="location.href='logo.html'">
+    <p>Logo Design</p>
+</div>
+<div class="folder-box">
+    <img src="image 14.png" onclick="location.href='home.html'">
+    <p>Poster Design</p>
+</div>
+<div class="folder-box">
+    <img src="image 14.png" onclick="location.href='home.html'"> 
+    <p>Branding & Packaging </p>
+</div>  
+<div class="folder-box">    
+    <img src="image 14.png" onclick="location.href='home.html'">
+    <p>Ui/Ux Design</p>
+</div>
+</div>
+    
+
+<div class="bottom-nav">
+    <div class="name">Folioverse</div>
+    <div class="nav-apps">
+       <img src="Home.png" onclick="location.href='home.html'">
+            <img src="About me.png" onclick="location.href='aboutme.html'">
+            <img src="Projects.png" onclick="location.href='projects.html'">
+            <img src="Contacts.png" onclick="location.href='contacts.html'">
+    </div>
+</div>
+
+</body>
+</html>

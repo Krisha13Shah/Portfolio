@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folioverse - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: auto;
+            width: 100vw;
+            overflow: auto;
+            font-family: "Poppins", sans-serif;
+            background-color: #F5F1E7;
+            background: repeating-linear-gradient(
+                to bottom,
+                #F5F1E7 0px,
+                #161616 2px,
+                #F5F1E7 0px,
+                #F5F1E7 50px
+            );
+            position: relative;
+            color: #161616;
+        }
+
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        .top-nav a {
+            font-size: 26px;
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .top-nav a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        .bottom-nav .name {
+            font-size: 32px;
+            color: white;
+            font-weight: bold;
+            padding-left: 40px;
+        }
+
+        .bottom-nav .nav-apps {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding-right: 40px;
+        }
+
+        .bottom-nav .nav-apps img {
+            height: 30px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .bottom-nav .nav-apps img:hover {
+            transform: scale(1.2);
+        }
+
+        .main-content {
+            margin-top: 40px;
+            margin-bottom: 60px;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .intro-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .intro-text {
+            flex: 1;
+            font-size: 32px;
+            line-height: 1.4;
+            font-weight: 200;
+            color: #161616;
+        }
+
+        .polaroid {
+            flex: 1;
+            position: relative;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .tape {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #f4a261;
+            transform: rotate(45deg);
+        }
+
+        .tape.top-left {
+            top: -10px;
+            left: -10px;
+        }
+
+        .tape.bottom-right {
+            bottom: -10px;
+            right: -10px;
+        }
+
+        .more-on-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .more-on-text {
+            font-size: 28px;
+            font-weight: 200;
+            color: #161616;
+        }
+
+        .more-on-image {
+            width: 99px;
+            height: 99px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .additional-image {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .additional-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .sticky-notes-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .sticky-note {
+            background-color: #fef08a;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: rotate(-2deg);
+            max-width: 400px;
+            font-weight: 200;
+            color: #161616;
+        }
+
+        .sticky-note:nth-child(even) {
+            transform: rotate(1deg);
+        }
+
+        .sticky-note h2 {
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .sticky-note p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .intro-section {
+                flex-direction: column;
+            }
+
+            .intro-text {
+                font-size: 24px;
+            }
+
+            .polaroid {
+                max-width: 250px;
+            }
+
+            .more-on-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="desktop.html">&lt; Home</a>
+        <div>
+            <a href="desktop.html">_</a>
+            <a href="desktop.html">X</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+       
+
+        <div class="more-on-section">
+            <div class="more-on-text">More on</div>
+            <img class="more-on-image" src="https://via.placeholder.com/99x99?text=Small+Image" alt="Small Image">
+        </div>
+
+        <div class="additional-image">
+            <img src="https://via.placeholder.com/600x400?text=Additional+Image" alt="Additional Image">
+        </div>
+
+        <div class="sticky-notes-container">
+            <div class="sticky-note">
+                <h2>My Favourite Works</h2>
+                <p>Here are some of my standout projects that showcase my creativity and skills. Check them out!</p>
+            </div>
+            <div class="sticky-note">
+                <h2>Skills</h2>
+                <p>✓ Illustrator<br>✓ Photoshop<br>✓ InDesign<br>✓ Figma<br>✓ Procreate<br>✓ HTML/CSS</p>
+            </div>
+            <div class="sticky-note">
+                <h2>Contact Me</h2>
+                <p>Ph: +91 xxxxx xxxxx<br>Mails: abc@gmail.com<br>Social media links: [Add links]</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="name">Folioverse</div>
+        <div class="nav-apps">
+            <img src="Home.png" onclick="location.href='index.html'" alt="Home">
+            <img src="About me.png" onclick="location.href='about.html'" alt="About Me">
+            <img src="Projects.png" onclick="location.href='projects.html'" alt="Projects">
+            <img src="Contacts.png" onclick="location.href='contacts.html'" alt="Contacts">
+        </div>
+    </div>
+</body>
+</html>

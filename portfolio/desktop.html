@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desktop</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        font-family: "Inter", sans-serif;
+        background-color: #FFDADA;
+    }
+  
+    .App {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        cursor: pointer;
+        flex-direction: column;
+        /* top: 20%;
+        left: 10%;
+        display: inline-block;
+        margin: 20px;
+        text-align: center;
+        color: white;*/
+    }
+    .App img {
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+
+       
+    }
+    .App:hover {
+        width: 110px;
+        height: 130px;
+        background: #efc4c4;
+        backdrop-filter: blur(8px); 
+        align-items: center;
+        justify-items: center;
+        border-radius: 15px;        
+        /*transform: scale(1.05);*/
+    }
+
+    .app-name {
+        margin-top: 10px;
+        font-size: 16px;
+        color: black;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #a1 { top: 178px; left: 138px; }
+    #a2 { top: 450px; left: 320px; }
+    #a3 { top: 100px; left: 1030px; }
+    #a4 { top: 341px; left: 1300px; }
+
+    .bottom-nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+       backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        background-color: #0000004d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 10 ;
+    }
+    .name {
+        font-size: 32px;
+        color: rgb(247, 247, 247);
+        font-weight: bold;
+        padding-left: 40px;
+    }
+    .nav-apps {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 500px;
+    }
+
+    .nav-apps img {
+        height: 30px;
+        margin-left: 0px;
+        margin-right: 50px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+</style>
+<body>
+    <img src="Img.png" 
+    style="  position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;;
+        object-fit: cover; 
+            object-position: center center;  
+            object-position: left top;
+            object-position: right bottom;
+            object-position: -120px 40px;">
+    
+        <div class="App" id="a1" onclick="location.href='home.html'">
+            <img src="Home.png">
+            <div class="app-name">Home</div>
+        </div>
+
+        <div class="App" id="a2" onclick="location.href='loading.html'">
+            <img src="About me.png">
+            <div class="app-name" >About me</div>
+        </div>
+
+        <div class="App" id="a3" onclick="location.href='index.html'">
+            <img src="Projects.png">
+            <div class="app-name">Projects</div>
+        </div>
+
+        <div class="App" id="a4" onclick="location.href='loading.html'">
+            <img src="Contacts.png">
+            <div class="app-name">Contacts</div>
+        </div>
+
+     <div class="bottom-nav">
+        <div class="name">Folioverse</div>
+
+        <div class="nav-apps">
+            <img src="Home.png" onclick="location.href='home.html'">
+            <img src="About me.png" onclick="location.href='aboutme.html'">
+            <img src="Projects.png" onclick="location.href='projects.html'">
+            <img src="Contacts.png" onclick="location.href='contacts.html'">
+        </div>
+    </div>
+
+</body>
+</html>
